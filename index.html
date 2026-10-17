@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudyFlow | Template Planner Tugas Kuliah untuk Mahasiswa</title>
+  <meta name="description" content="Atur tugas kuliah, deadline, prioritas, dan rencana mingguan dengan StudyFlow Student Planner. Template Excel praktis untuk membantu mahasiswa belajar lebih terstruktur.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#17324d">
+  <style>
+    :root{--navy:#17324d;--teal:#137c78;--mint:#ddf4ee;--ink:#233447;--muted:#63758a;--bg:#f5f8fb;--line:#d9e2ec;--white:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1080px,92%);margin:auto}
+    header{background:var(--white);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:20px}
+    .brand{font-weight:850;letter-spacing:.04em;color:var(--navy);font-size:1.05rem}
+    .brand span{color:var(--teal)}
+    .nav small{color:var(--muted)}
+    .hero{padding:70px 0 54px;background:linear-gradient(135deg,#edf6f6 0%,#f5f8fb 58%,#e9eef9 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 11px;border-radius:999px;background:var(--mint);color:var(--teal);font-size:.78rem;font-weight:750;letter-spacing:.05em;text-transform:uppercase}
+    h1{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.045em;color:var(--navy);margin:18px 0}
+    .lead{font-size:1.12rem;color:#40536a;max-width:620px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:750;border:1px solid var(--teal)}
+    .btn-primary{background:var(--teal);color:#fff}
+    .btn-secondary{color:var(--teal);background:#fff}
+    .note{font-size:.84rem;color:var(--muted);margin-top:12px}
+    .mock{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 50px #17324d12}
+    .mock-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .dot{width:9px;height:9px;display:inline-block;border-radius:50%;background:var(--teal);margin-right:5px}
+    .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .metric{padding:16px;border-radius:14px;background:#f5f8fb;border:1px solid #e7edf3}
+    .metric strong{display:block;font-size:1.5rem;color:var(--navy)}
+    .metric small{color:var(--muted)}
+    .progress{height:8px;background:#e4ebf1;border-radius:999px;overflow:hidden;margin-top:15px}
+    .progress span{display:block;width:68%;height:100%;background:var(--teal)}
+    section{padding:58px 0}
+    h2{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;color:var(--navy);letter-spacing:-.025em;margin:0 0 14px}
+    .section-intro{color:var(--muted);max-width:690px;margin:0 0 28px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+    .icon{width:42px;height:42px;border-radius:12px;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-weight:850;margin-bottom:15px}
+    .feature h3{margin:0 0 8px;color:var(--navy);font-size:1.05rem}
+    .feature p{margin:0;color:var(--muted);font-size:.95rem}
+    .how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{padding:20px;border-left:3px solid var(--teal);background:var(--bg);border-radius:0 12px 12px 0}
+    .step b{display:block;color:var(--navy);margin-bottom:7px}
+    .cta{background:var(--navy);color:#fff;border-radius:22px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta h2{color:#fff;margin-bottom:8px}
+    .cta p{color:#d8e3ef;margin:0}
+    .cta .btn{background:#fff;color:var(--navy);border-color:#fff;white-space:nowrap}
+    .faq{max-width:800px}
+    details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0}
+    summary{font-weight:750;color:var(--navy);cursor:pointer}
+    details p{color:var(--muted);margin-bottom:0}
+    footer{padding:28px 0;color:var(--muted);font-size:.85rem}
+    @media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:45px}.features,.steps{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.nav small{display:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">STUDY<span>FLOW</span></div>
+    <small>Student Planner · Template Excel</small>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Student productivity toolkit</span>
+        <h1>Tugas kuliah lebih teratur. Pikiran lebih lega.</h1>
+        <p class="lead">StudyFlow adalah template planner mahasiswa untuk mencatat tugas, memantau deadline, menentukan prioritas, dan merencanakan minggu belajar dalam satu file.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="assets/StudyFlow_Professional_Planner.xlsx" download>Unduh template gratis</a>
+          <a class="btn btn-secondary" href="#fitur">Lihat fitur</a>
+        </div>
+        <p class="note">Format Excel (.xlsx). Modal penggunaan awal Rp0. File dapat disesuaikan dengan kebutuhan kuliah masing-masing.</p>
+      </div>
+      <div class="mock" aria-label="Ilustrasi ringkasan planner">
+        <div class="mock-top"><strong>Semester overview</strong><span><i class="dot"></i>Planner</span></div>
+        <div class="metric-grid">
+          <div class="metric"><small>Total tugas</small><strong>Terpantau</strong><small>Catat dalam satu daftar</small></div>
+          <div class="metric"><small>Deadline</small><strong>Terlihat</strong><small>Hitung sisa hari</small></div>
+          <div class="metric"><small>Status</small><strong>Praktis</strong><small>Pilih melalui dropdown</small></div>
+          <div class="metric"><small>Rencana</small><strong>Mingguan</strong><small>Fokus dan jadwal belajar</small></div>
+        </div>
+        <div class="progress"><span></span></div>
+        <p class="note">Ilustrasi fitur, bukan data pengguna atau hasil penggunaan nyata.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fitur">
+    <div class="wrap">
+      <h2>Satu template untuk mengatur aktivitas kuliah</h2>
+      <p class="section-intro">Dirancang untuk mahasiswa yang ingin mulai dari sistem sederhana tanpa harus memasang aplikasi baru atau membayar langganan.</p>
+      <div class="features">
+        <article class="feature"><div class="icon">01</div><h3>Task Tracker</h3><p>Catat mata kuliah, nama tugas, deadline, prioritas, status, estimasi waktu, dan tautan pendukung.</p></article>
+        <article class="feature"><div class="icon">02</div><h3>Ringkasan Dashboard</h3><p>Lihat jumlah tugas, tugas selesai, pekerjaan berjalan, tugas terlambat, dan pengingat deadline berdasarkan data yang kamu masukkan.</p></article>
+        <article class="feature"><div class="icon">03</div><h3>Weekly Planner</h3><p>Rencanakan prioritas harian, jadwal kuliah, blok belajar, waktu pribadi, dan istirahat.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <h2>Mulai dalam tiga langkah</h2>
+      <p class="section-intro">Tidak perlu setup rumit. Unduh file, masukkan tugasmu, lalu perbarui status ketika ada perubahan.</p>
+      <div class="steps">
+        <div class="step"><b>1. Unduh</b>Ambil file planner Excel melalui tombol di halaman ini.</div>
+        <div class="step"><b>2. Isi tugas</b>Masukkan tugas nyata dan deadline pada sheet Task Tracker.</div>
+        <div class="step"><b>3. Pantau</b>Gunakan Dashboard dan Weekly Planner untuk membantu menentukan fokus.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <div><h2>Mulai atur tugasmu hari ini.</h2><p>Template sederhana untuk membantu rutinitas kuliah lebih terstruktur.</p></div>
+        <a class="btn" href="assets/StudyFlow_Professional_Planner.xlsx" download>Unduh StudyFlow</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap faq">
+      <h2>Pertanyaan umum</h2>
+      <details><summary>Apakah StudyFlow berbayar?</summary><p>Template yang tersedia di halaman ini dapat diunduh tanpa biaya.</p></details>
+      <details><summary>Apakah ini aplikasi yang tersambung ke sistem kampus?</summary><p>Bukan. StudyFlow adalah template spreadsheet mandiri. Pengguna perlu memasukkan dan memperbarui data sendiri.</p></details>
+      <details><summary>Apakah progres tugas benar-benar mengukur persentase pekerjaan?</summary><p>Progres pada versi ini merupakan indikator sederhana berdasarkan status tugas, bukan pengukuran rinci atas semua sub-tugas.</p></details>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© StudyFlow · Template planner untuk mahasiswa. Klaim penggunaan, trafik, dan hasil hanya akan ditambahkan jika tersedia data nyata.</div></footer>
+</body>
+</html>
